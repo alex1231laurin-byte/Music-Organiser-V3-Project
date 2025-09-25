@@ -93,6 +93,16 @@ public class MusicOrganizer
         }
     }
     
+        /**
+     * Show a list of all the files in the collection.
+     */
+    public void playAllSamples()
+    {
+        for(String filename : files) {
+            player.playSample(filename);
+        }
+    }
+    
     /**
      * Remove a file from the collection.
      * @param index The index of the file to be removed.
@@ -136,6 +146,13 @@ public class MusicOrganizer
             player.playSample(filename);
         }
     }
+    
+    //public void viewTrackList()
+    //{
+        //for(String trackList : track) {
+            //System.out.println(tracklist);
+        //}
+    //}
 
     /**
      * Determine whether the given index is valid for the collection.
