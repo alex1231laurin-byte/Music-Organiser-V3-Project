@@ -75,6 +75,25 @@ public class MusicOrganizer
     }
     
     /**
+     * List the names of files matching the given search string.
+     * @param searchString The string to match
+     */
+    public void listMatching(String searchString)
+    {
+        boolean searchTrack = false;
+        for(String filename : files) {
+            if(filename.contains(searchString)) {
+                //A match!
+                System.out.println(filename);
+                searchTrack = true;
+            }
+        }
+        if(searchTrack != true){
+            System.out.println("Error: could not find any files with that name.");
+        }
+    }
+    
+    /**
      * Remove a file from the collection.
      * @param index The index of the file to be removed.
      */
